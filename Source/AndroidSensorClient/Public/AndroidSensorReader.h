@@ -23,7 +23,7 @@ private:
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Android Sensor Client")
-	FString ServerUrl;
+	FString ServerUrl = TEXT("192.168.0.1:8080");
 
 	UAndroidSensorReader();
 
