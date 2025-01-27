@@ -14,6 +14,7 @@ void UAndroidSensorReader::BeginPlay() {
 	Socket->OnConnected().AddUObject(this, &UAndroidSensorReader::ReceiveOnConnected);
 	Socket->OnClosed().AddUObject(this, &UAndroidSensorReader::ReceiveOnClosed);
 	Socket->OnConnectionError().AddUObject(this, &UAndroidSensorReader::ReceiveOnError);
+	Socket->Connect();
 }
 
 void UAndroidSensorReader::EndPlay(const EEndPlayReason::Type EndPlayReason) {
